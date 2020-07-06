@@ -1,26 +1,19 @@
 "use strict";
 
-let credits = 23580;
+const credits = 23580;
 const pricePerDroid = 3000;
-let totalPrice = 0;
-let message;
-let balance;
+let totalPrice;
 
-const countDroid = prompt("необходимое количество дроидов");
-// console.log(countDroid);
+const countDroid = prompt("необходимое количество дроидов?");
+
 if (countDroid === null) {
-  message = "Отменено пользователем!";
-} else if (countDroid > 0) {
+  alert("Отменено пользователем!");
+} else {
   totalPrice = countDroid * pricePerDroid;
-} else {
-  message = "Доступ запрещен, неверный пароль!";
+  const balance = credits - totalPrice;
+  alert(
+    credits >= totalPrice
+      ? `Вы купили ${countDroid} дроидов, на счету осталось ${balance} кредитов.`
+      : "Недостаточно средств на счету!"
+  );
 }
-console.log(message);
-
-if (totalPrice > credits) {
-  message = "Недостаточно средств на счету!";
-} else {
-  balance = credits - totalPrice;
-  message = `Вы купили ${countDroid} дроидов, на счету осталось ${balance} кредитов.`;
-}
-console.log(message);

@@ -12,9 +12,8 @@ if (inputStart === null) {
   message = "Вы ввели пустую строку";
   console.log(message);
 } else {
-  let country = inputStart.toLowerCase();
-  let inputNormalize;
-  inputNormalize =
+  const country = inputStart.toLowerCase();
+  const inputNormalize =
     inputStart[0].toUpperCase() + inputStart.slice(1).toLowerCase();
 
   switch (country) {

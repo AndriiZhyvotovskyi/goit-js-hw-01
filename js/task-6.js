@@ -1,8 +1,8 @@
 "use strict";
 
 let total = 0;
-let input;
-
+let input = true;
+console.log(input);
 do {
   let input = prompt("Введите число");
 
