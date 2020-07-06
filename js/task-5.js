@@ -1,36 +1,48 @@
 "use strict";
-const priceOne = 100;
-const priceTwo = 250;
-const priceThree = 170;
-const priceFour = 80;
-const priceFive = 120;
 
-const country = prompt("введите страну");
-const inputNormalize = country.toLowerCase();
-console.log(inputNormalize);
+const input = prompt("введите страну");
+let message;
+
+if (input === null) {
+  message = "Отменено пользователем!";
+} else if (input === "") {
+  message = "Вы ничего не указали";
+} else {
+  message = "Эта страна не доступна";
+}
+
+console.log(message);
+
+// const inputNormalize = input[0].toUpperCase() + input.slice(1).toLowerCase();
+// console.log(inputNormalize);
 
 // const country = input;
 let result;
 
-switch (country) {
-  case "Китай":
-    result = `Доставка в ${country} будет стоить ${priceOne} кредитов`;
+switch (input) {
+  case "китай":
+    price = 100;
+    result = `Доставка в ${input} будет стоить ${price} кредитов`;
     break;
 
-  case "Чили":
-    result = `Доставка в ${country} будет стоить ${priceTwo} кредитов`;
+  case "чили":
+    price = 250;
+    result = `Доставка в ${input} будет стоить ${price} кредитов`;
     break;
 
-  case "Австралия":
-    result = `Доставка в ${country} будет стоить ${priceThree} кредитов`;
+  case "австралия":
+    price = 170;
+    result = `Доставка в ${input} будет стоить ${price} кредитов`;
     break;
 
-  case "Индия":
-    result = `Доставка в ${country} будет стоить ${priceFour} кредитов`;
+  case "индия":
+    price = 80;
+    result = `Доставка в ${input} будет стоить ${price} кредитов`;
     break;
 
-  case "Ямайка":
-    result = `Доставка в ${country} будет стоить ${priceFive} кредитов`;
+  case "ямайка":
+    price = 120;
+    result = `Доставка в ${input} будет стоить ${price} кредитов`;
     break;
 
   default:
