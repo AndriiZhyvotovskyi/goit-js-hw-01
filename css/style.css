@@ -1,0 +1,153 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v14-latin_cyrillic-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin_cyrillic-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-600 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"),
+    url("../fonts/montserrat-v14-latin_cyrillic-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin_cyrillic-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-800 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"),
+    url("../fonts/montserrat-v14-latin_cyrillic-800.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin_cyrillic-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --font-first: "Montserrat", sans-serif;
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(7, 4, 5);
+  --color-gray-first: rgb(170, 170, 170);
+  --color-gray-second: rgb(200, 200, 200);
+  --color-blue: rgb(0, 64, 240);
+  --color-gold: rgb(255, 215, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--font-first);
+  line-height: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.section__list {
+  list-style: disc;
+  margin: 0 0 0 40px;
+}
+.section__description {
+  margin: 0 0 10px 0;
+}
+.section__list-second {
+  list-style: circle;
+  margin: 0 0 0 20px;
+}
+.special__task {
+  border-left: 5px solid var(--color-gold);
+  padding: 0 0 0 20px;
+  margin: 0 0 0 10px;
+}
+.section__task {
+  margin: 0 0 10px 0;
+}
+.performance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message {
+  resize: none;
+  width: 50%;
+  padding: 20px;
+}
+.input {
+  padding: 5px 10px;
+}
+.button {
+  background-color: var(--color-white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.button:hover {
+  background-color: var(--color-gold);
+}
+.header {
+  background-color: var(--color-gray-first);
+  padding: 30px 0 20px 0;
+}
+.header__title {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.first {
+  background-color: var(--color-gray-second);
+  padding: 0 0 30px 0;
+}
+.second {
+  background-color: var(--color-gray-first);
+  padding: 0 0 30px 0;
+}
+.third {
+  background-color: var(--color-gray-second);
+  padding: 0 0 30px 0;
+}
+.fourth {
+  background-color: var(--color-gray-first);
+  padding: 0 0 30px 0;
+}
+.five {
+  background-color: var(--color-gray-second);
+  padding: 0 0 30px 0;
+}
+.six {
+  background-color: var(--color-gray-first);
+  padding: 0 0 30px 0;
+}
